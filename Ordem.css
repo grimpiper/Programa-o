@@ -1,0 +1,572 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080b10;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Site {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.Cabecalho {
+    background-color: #111923;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px 5%;
+    border-bottom: 2px solid #344454;
+}
+
+.Logo {
+    flex: 1;
+}
+
+#logo {
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.Informacao {
+    color: #c3d5e5;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+}
+
+.Menu {
+    background-color: #172330;
+    text-align: center;
+    padding: 18px;
+    border-bottom: 1px solid #344454;
+}
+
+#menu {
+    color: #d5e5f5;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.Conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.Texto {
+    flex: 1;
+}
+
+.Texto h1 {
+    color: #c9d9e9;
+    font-size: 38px;
+    margin-bottom: 25px;
+    border-left: 5px solid #718da8;
+    padding-left: 15px;
+}
+
+#Descricao {
+    color: #d1d5db;
+    font-size: 18px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.Imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#knight {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #344454;
+    box-shadow: 0 0 25px rgba(83, 112, 143, 0.2);
+}
+
+.Botao {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 24px;
+    background-color: #26394d;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #718da8;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.Botao:hover {
+    background-color: #496783;
+    transform: translateY(-3px);
+}
+
+.Rodape {
+    background-color: #111923;
+    border-top: 2px solid #344454;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.Rodape a {
+    color: #c3d5e5;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.Rodape a:hover {
+    color: white;
+}
+
+.Copyright {
+    width: 100%;
+    text-align: center;
+    color: #7f91a3;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+
+    .Cabecalho {
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 10px;
+    }
+
+    #logo {
+        width: 200px;
+        margin: auto;
+    }
+
+    .Informacao {
+        font-size: 15px;
+    }
+
+    #menu {
+        font-size: 18px;
+    }
+
+    .Conteudo {
+        flex-direction: column;
+        text-align: center;
+        margin: 25px auto;
+        padding: 25px;
+        gap: 30px;
+    }
+
+    .Texto {
+        width: 100%;
+    }
+
+    .Texto h1 {
+        font-size: 30px;
+        border-left: none;
+        padding-left: 0;
+    }
+
+    #Descricao {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .Imagem {
+        width: 100%;
+        order: 1;
+    }
+
+    .Texto {
+        order: 0;
+    }
+
+    #knight {
+        max-width: 500px;
+    }
+
+    .Botao {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .Cabecalho {
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    #logo {
+        width: 145px;
+    }
+    #Info1,
+    #Info2 {
+        display: none;
+    }
+
+    .Menu {
+        padding: 14px;
+    }
+
+    #menu {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .Conteudo {
+        padding: 20px;
+        margin: 15px auto;
+        gap: 25px;
+    }
+
+    .Texto h1 {
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    #Descricao {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    #knight {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .Botao {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    .Rodape {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 15px;
+    }
+
+    .Copyright {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+}
+
+.Destaques,
+.Localizacao,
+.PerguntasFrequentes {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 30px;
+}
+
+.Destaques h2,
+.Localizacao h2,
+.PerguntasFrequentes h2 {
+    color: #c9d9e9;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.Subtitulo {
+    color: #aabaca;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.GradeDestaques {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.CardDestaque {
+    background-color: #111923;
+    border: 1px solid #344454;
+    border-radius: 12px;
+    padding: 30px 24px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.CardDestaque:hover {
+    transform: translateY(-5px);
+    border-color: #718da8;
+}
+
+.IconeDestaque {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.CardDestaque h3 {
+    color: #d5e5f5;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.CardDestaque p {
+    color: #b8c5d2;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.ChamadaAcao {
+    background: linear-gradient(135deg, #172330, #26394d);
+    border-top: 1px solid #496783;
+    border-bottom: 1px solid #496783;
+    padding: 55px 25px;
+    text-align: center;
+}
+
+.ChamadaAcao h2 {
+    color: #e0ecf7;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.ChamadaAcao p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #c3d5e5;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.BotaoAcao {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 26px;
+    background-color: #080f17;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #718da8;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.BotaoAcao:hover {
+    background-color: #496783;
+    transform: translateY(-3px);
+}
+
+.GradeLocalizacao {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 35px;
+}
+
+.MapaHallownest {
+    width: 100%;
+    overflow: hidden;
+    background-color: #0b121b;
+    border: 1px solid #344454;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(83, 112, 143, 0.15);
+}
+
+.MapaHallownest svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.InformacoesLocalizacao {
+    background-color: #111923;
+    border: 1px solid #344454;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.InformacoesLocalizacao h3 {
+    color: #d5e5f5;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.InformacoesLocalizacao p,
+.InformacoesLocalizacao li {
+    color: #c1ccd7;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.InformacoesLocalizacao ul {
+    padding-left: 22px;
+    margin: 20px 0;
+}
+
+.InformacoesLocalizacao strong {
+    color: #d5e5f5;
+}
+
+.InformacoesLocalizacao .AvisoMapa {
+    color: #8fa3b7;
+    font-size: 13px;
+    border-top: 1px solid #344454;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.ListaPerguntas {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.ListaPerguntas details {
+    background-color: #111923;
+    border: 1px solid #344454;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+.ListaPerguntas summary {
+    color: #d5e5f5;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.ListaPerguntas summary:hover {
+    color: #9ebbd6;
+}
+
+.ListaPerguntas details p {
+    color: #c1ccd7;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+@media (max-width: 900px) {
+    .Destaques,
+    .Localizacao,
+    .PerguntasFrequentes {
+        margin: 35px auto;
+        padding: 25px;
+    }
+
+    .GradeDestaques {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .GradeLocalizacao {
+        gap: 20px;
+    }
+
+    .InformacoesLocalizacao {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+    .Destaques,
+    .Localizacao,
+    .PerguntasFrequentes {
+        margin: 25px auto;
+        padding: 20px;
+    }
+
+    .Destaques h2,
+    .Localizacao h2,
+    .PerguntasFrequentes h2,
+    .ChamadaAcao h2 {
+        font-size: 24px;
+    }
+
+    .Subtitulo {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .GradeDestaques {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .CardDestaque {
+        padding: 25px 20px;
+    }
+
+    .CardDestaque h3 {
+        font-size: 19px;
+    }
+
+    .CardDestaque p {
+        font-size: 14px;
+    }
+
+    .ChamadaAcao {
+        padding: 40px 20px;
+    }
+
+    .ChamadaAcao p {
+        font-size: 14px;
+    }
+
+    .BotaoAcao {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .GradeLocalizacao {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .InformacoesLocalizacao {
+        padding: 22px;
+    }
+
+    .InformacoesLocalizacao h3 {
+        font-size: 20px;
+    }
+
+    .InformacoesLocalizacao p,
+    .InformacoesLocalizacao li {
+        font-size: 14px;
+    }
+
+    .ListaPerguntas details {
+        padding: 16px;
+    }
+
+    .ListaPerguntas summary {
+        font-size: 15px;
+    }
+
+    .ListaPerguntas details p {
+        font-size: 14px;
+    }
+}
